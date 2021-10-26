@@ -1,0 +1,63 @@
+.TodoItem{
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(109, 168, 109);
+    margin-top: 10px;
+    width: 80vw;
+    border-radius: 12px;
+    z-index: 998;
+    display: flex;
+}
+
+.TodoItem>*{
+    z-index: 998;
+}
+
+.TodoItem-Text{
+    width: 100%;
+    text-align: center;
+}
+
+.TodoItem-Text__active{
+    color: black;
+    text-decoration: line-through;
+}
+
+.TodoItem-Check{
+   position: sticky;
+   margin-top: 5px;
+   margin-left: 10px;
+   width: 30px;
+   height: 30px;
+   color: black;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.TodoItem-check__icon{
+    width: 30px;
+    height: 30px;
+}
+
+.TodoItem-check__active{
+    color: green;
+}
+
+
+.TodoItem-delete{
+    position: sticky;
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+    margin-right: -5px;
+    color: red;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.TodoItem-delete__icon{
+    width: 20px;
+    height: 20px;
+}
+

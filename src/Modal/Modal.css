@@ -1,0 +1,75 @@
+.ModalBackground{
+    background: rgba(32, 35, 41, .8);
+    position: fixed;
+    top: -10px;
+    right: -10px;
+    left: -10px;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 998;
+}
+
+.todos-form{
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(70, 91, 207, 0.925);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.newtodo-title{
+    width: 70vw;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.newTodo-box{
+    width: 60vw;
+    height: 100px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.newTodo-box:focus{
+    outline: none;
+}
+
+.newTodo-button-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newTodo-button-container #cancel-button{
+    width: 100px;
+    border-radius: 8px;
+    height:50px;
+    border: none;
+    background-color: rgba(238, 238, 240, 0.726);
+    font-size: 18px;
+    font-weight: 400;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.newTodo-button-container #submit-button{
+    width: 100px;
+    border-radius: 8px;
+    height:50px;
+    border: none;
+    background-color: rgb(10, 190, 79);
+    font-size: 18px;
+    font-weight: 400;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: white;
+}
