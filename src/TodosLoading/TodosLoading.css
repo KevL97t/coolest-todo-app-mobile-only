@@ -1,9 +1,12 @@
 .LoadingTodo-container {
+    width: 80%;
+    margin: 20px auto;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 24px;
+    border-radius: 12px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
   }
   

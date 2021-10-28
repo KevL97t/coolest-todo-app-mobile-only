@@ -12,3 +12,7 @@
     text-align: center;
     color: white;
 }
+
+.TodoCounter--loading{
+    opacity: 50%;
+}

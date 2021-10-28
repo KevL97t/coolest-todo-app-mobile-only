@@ -2,9 +2,7 @@ import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 
-const TodoContext = React.createContext();
-
-function TodoProvider(props){
+function useTodos(){
     const {
         item: todos,
         saveItem: saveTodos,
@@ -31,11 +29,29 @@ function TodoProvider(props){
     
       const addTodo = (text) => {
         const newTodos = [...todos];
-        newTodos.push({
-          completed: false,
-          text,
-        });
-        saveTodos(newTodos);
+        if(text === 'UTemplate'){
+          const fetchTodos = async () =>{
+            const res = await fetch('https://jsonplaceholder.typicode.com/todos'),
+                  json = await res.json(),
+                  template = await json.slice(0, 10);
+            console.log(template);
+
+            template.forEach(item => {
+            newTodos.push({
+              completed: false,
+              text: item.title
+            })
+            saveTodos(newTodos);
+            })
+          }
+          fetchTodos();
+        } else {
+          newTodos.push({
+            completed: false,
+            text,
+          });
+          saveTodos(newTodos);
+        }
       };
 
       const completeTodo = (text) => {
@@ -54,11 +70,10 @@ function TodoProvider(props){
     
       React.useEffect(()=>{
         console.log('use effect')
-      }, [totalTodos]); 
+      }, []); 
     
 
-    return(
-        <TodoContext.Provider value={ {
+    return {
             loading,
             error,
             totalTodos,
@@ -71,11 +86,8 @@ function TodoProvider(props){
             deleteTodo,
             openModal,
             setOpenModal,
-        } }>
-            { props.children }
-        </TodoContext.Provider>
-    );
+        };
 }
 
 
-export { TodoContext, TodoProvider }; 
+export { useTodos }; 

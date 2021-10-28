@@ -2,7 +2,7 @@ import React from "react";
 
 function TodoHeader({ children }){
     return(
-        <header>{children}</header>
+        <header> {children} </header>
     );
 }
 
