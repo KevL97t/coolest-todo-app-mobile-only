@@ -56,7 +56,7 @@ function App() {
             onLoading={() => <TodosLoading />}
             onEmptyTodos={()=><EmptyTodos />}
             onEmptySearchResults={
-              (searchText) => <p style={{textAlign: 'center', color: 'white'}}>Whoops! No hay resultados para {searchText}</p>
+              (searchText) => <p style={{textAlign: 'center', color: 'white'}}>Whoops! there's no matches for {searchText}</p>
             }
             render={todo => (<TodoItem key={todo.text} text={todo.text} completed= {todo.completed} 
             onComplete={() => completeTodo(todo.text)}
