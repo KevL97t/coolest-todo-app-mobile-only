@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/coolest-todo-app-mobile-only/static/css/main.7d76c299.chunk.css",
-    "main.js": "/coolest-todo-app-mobile-only/static/js/main.a15fc353.chunk.js",
-    "main.js.map": "/coolest-todo-app-mobile-only/static/js/main.a15fc353.chunk.js.map",
+    "main.css": "/coolest-todo-app-mobile-only/static/css/main.5ff62808.chunk.css",
+    "main.js": "/coolest-todo-app-mobile-only/static/js/main.6154cdf6.chunk.js",
+    "main.js.map": "/coolest-todo-app-mobile-only/static/js/main.6154cdf6.chunk.js.map",
     "runtime-main.js": "/coolest-todo-app-mobile-only/static/js/runtime-main.b5ca4d2f.js",
     "runtime-main.js.map": "/coolest-todo-app-mobile-only/static/js/runtime-main.b5ca4d2f.js.map",
-    "static/js/2.940882fe.chunk.js": "/coolest-todo-app-mobile-only/static/js/2.940882fe.chunk.js",
-    "static/js/2.940882fe.chunk.js.map": "/coolest-todo-app-mobile-only/static/js/2.940882fe.chunk.js.map",
+    "static/js/2.ab30161d.chunk.js": "/coolest-todo-app-mobile-only/static/js/2.ab30161d.chunk.js",
+    "static/js/2.ab30161d.chunk.js.map": "/coolest-todo-app-mobile-only/static/js/2.ab30161d.chunk.js.map",
     "index.html": "/coolest-todo-app-mobile-only/index.html",
-    "static/css/main.7d76c299.chunk.css.map": "/coolest-todo-app-mobile-only/static/css/main.7d76c299.chunk.css.map",
-    "static/js/2.940882fe.chunk.js.LICENSE.txt": "/coolest-todo-app-mobile-only/static/js/2.940882fe.chunk.js.LICENSE.txt"
+    "static/css/main.5ff62808.chunk.css.map": "/coolest-todo-app-mobile-only/static/css/main.5ff62808.chunk.css.map",
+    "static/js/2.ab30161d.chunk.js.LICENSE.txt": "/coolest-todo-app-mobile-only/static/js/2.ab30161d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b5ca4d2f.js",
-    "static/js/2.940882fe.chunk.js",
-    "static/css/main.7d76c299.chunk.css",
-    "static/js/main.a15fc353.chunk.js"
+    "static/js/2.ab30161d.chunk.js",
+    "static/css/main.5ff62808.chunk.css",
+    "static/js/main.6154cdf6.chunk.js"
   ]
 }
