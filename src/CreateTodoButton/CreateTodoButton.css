@@ -4,13 +4,16 @@
     width: 60px;
     height: 50px;
     left: 80vw;
-    top: 88vh;
+    top: 89vh;
     border-radius: 12px;
-    border: none;
     background-color: rgba(97, 115, 233, 0.767);
-    box-shadow: rgb(52, 54, 56) 0px 20px 30px -10px;
-    z-index: 999;
+    box-shadow: rgb(28, 128, 228) 0px 20px 30px -10px;
+    z-index: 997;
     color: white;
     font-weight: 700;
     font-size: 30px;
+}
+
+.create-todo-button__icon{
+    margin-top: 5px;
 }

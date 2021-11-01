@@ -1,0 +1,77 @@
+.eagle-mode-modal__background{
+    background-color: #282c34;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: -1px;
+    bottom: -1px;
+    left:-1px;
+    right: -1px;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease;
+}
+
+.Eagle-mode-list{
+    width: 83%;
+    height: 70%;
+    background-color: rgb(255, 187, 0);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 998;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: rgba(190, 188, 188, 0.473) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 2px solid black;
+}
+
+.eagle-mode-list__todos{
+    background-color: rgba(214, 163, 21, 0.76);
+    height: 80%;
+    width: 100%;
+    z-index: 998;
+    overflow-y: scroll;
+    box-shadow: rgba(190, 188, 188, 0.473) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.eagle-mode-list__button{
+    align-self: center;
+    width: 120px;
+    height: 50px;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(96, 104, 99);  
+    font-size: 18px;
+    box-shadow: rgb(136, 131, 117) 0px 20px 30px -10px;
+    border: 2px solid black;
+}
+
+.eagle-mode-list__icon-container{
+    position: absolute;
+    width: 127px;
+    height: 67px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-evenly;
+    top: 5vh;
+    left: 19vh;
+    border-radius: 12px;
+    border: 2px solid black;
+    background-color: rgb(255, 187, 0);
+    flex-direction: column;
+    padding: 3px;
+}
+
+.eagle-mode-list__icon{
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.eagle-mode-list__text{
+    margin-left: 18px;
+    margin-top: 5px;
+}

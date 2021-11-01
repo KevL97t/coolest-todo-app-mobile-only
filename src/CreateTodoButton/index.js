@@ -1,5 +1,6 @@
 import React from "react";
 import './CreateTodoButton.css';
+import { MdOutlinePostAdd } from 'react-icons/md'
 
 function CreateTodoButton(props){
     const onClickButton = () =>{
@@ -10,10 +11,8 @@ function CreateTodoButton(props){
     return (
         <button className="CreateTodoButton"
         onClick = {onClickButton}
-
-        
         >
-            +
+            <MdOutlinePostAdd className="create-todo-button__icon"/>
         </button>
     );
 }

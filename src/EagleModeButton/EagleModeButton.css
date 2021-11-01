@@ -1,0 +1,15 @@
+.eagle-mode-button{
+    position: fixed;
+    width: 60px;
+    height: 50px;
+    top: 89vh;
+    left: 4vh;
+    border-radius: 8px;
+    background-color: rgb(255, 187, 0);
+    box-shadow: rgb(255, 187, 0) 0px 20px 20px -10px;
+}
+
+.eagle-mode-button-icon{
+    width: 40px;
+    height: 40px;
+}

@@ -1,4 +1,3 @@
-// import './App.css';
 import React from "react";
 import { useTodos } from "./useTodos";
 import { TodoCounter } from "../TodoCounter";
@@ -12,8 +11,13 @@ import { EmptyTodos } from '../EmptyTodos'
 import { TodosLoading } from '../TodosLoading'
 import { TodosError } from '../TodosError';
 import { TodoHeader } from '../TodoHeader';
-
-
+import { ChangeAlert } from "../ChangeAlert";
+import { EagleModeButton } from "../EagleModeButton";
+import { EagleModeModal } from "../EagleModeModal";
+import { EagleModeList } from "../EagleModeList";
+import { RetributionModeButton } from "../RetributionModeButton";
+import { RetributionModeModal } from "../RetributionModeModal";
+import { RetributionModeList } from "../RetributionModeList";
 
 function App() {
   const { 
@@ -28,11 +32,18 @@ function App() {
     completedTodos,
     searchValue, 
     setSearchValue,
-    addTodo
+    addTodo,
+    syncTodos,
+    eagleMode,
+    setEagleMode,
+    uncompleteTodosList,
+    RetributionMode,
+    setRetributionMode,
+    completedTodosList
    } = useTodos();
 
    return (
-    <React.Fragment>
+  <React.Fragment>
     <TodoHeader>
         <TodoCounter 
         totalTodos={totalTodos}
@@ -74,12 +85,49 @@ function App() {
                 </Modal>
             )}
 
-    <CreateTodoButton 
-    setOpenModal = {setOpenModal}
+          <CreateTodoButton 
+               setOpenModal = {setOpenModal}
     
-    />
+          />
+
+            {!!eagleMode && (
+              <EagleModeModal>
+                <EagleModeList 
+                setEagleMode = {setEagleMode}
+                uncompleteTodosList = {uncompleteTodosList}
+                renderList = {item => <TodoItem key={item.text} completed={item.completed} text = {item.text}/>}
+                />
+              </ EagleModeModal>
+
+              )}
+
+          <EagleModeButton 
+                setEagleMode = { setEagleMode }
+              
+          />
+
+          {!!RetributionMode && (
+
+            <RetributionModeModal>
+              <RetributionModeList
+              setRetributionMode = { setRetributionMode }
+              completedTodosList = { completedTodosList } 
+              renderList = {item => <TodoItem key={item.text} completed={item.completed} text = {item.text} />}
+              />
+            </RetributionModeModal>
+
+          )}
+
+          <RetributionModeButton 
+                setRetributionMode = { setRetributionMode }
+            
+          />
+
+          <ChangeAlert
+          syncronize = {syncTodos}
+          />
    
-</React.Fragment>
+    </React.Fragment>
 
 );
 }

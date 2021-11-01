@@ -6,15 +6,23 @@ function useTodos(){
     const {
         item: todos,
         saveItem: saveTodos,
+        sync: syncTodos,
         loading,
         error,
       } = useLocalStorage('TODOS_V1', []);
       const [searchValue, setSearchValue] = React.useState('');
       const [openModal, setOpenModal] = React.useState(false);
+      const [eagleMode, setEagleMode] = React.useState(false);
+      const [RetributionMode, setRetributionMode] = React.useState(false);
     
       const completedTodos = todos.filter(todo => !!todo.completed).length;
       const totalTodos = todos.length;
-    
+      const uncompleteTodosList = todos.filter(todo => !todo.completed);
+      console.log(uncompleteTodosList)
+      const completedTodosList = todos.filter(todo => !!todo.completed)
+      console.log(completedTodosList)
+
+
       let searchedTodos = [];
     
       if (!searchValue.length >= 1){
@@ -68,9 +76,9 @@ function useTodos(){
         saveTodos(newTodos);
       };
     
-      React.useEffect(()=>{
-        console.log('use effect')
-      }, []); 
+      // React.useEffect(()=>{
+      //   console.log('use effect')
+      // }, []); 
     
 
     return {
@@ -78,6 +86,8 @@ function useTodos(){
             error,
             totalTodos,
             completedTodos,
+            uncompleteTodosList,
+            completedTodosList,
             searchValue,
             setSearchValue,
             searchedTodos,
@@ -86,6 +96,11 @@ function useTodos(){
             deleteTodo,
             openModal,
             setOpenModal,
+            syncTodos,
+            eagleMode,
+            setEagleMode,
+            RetributionMode,
+            setRetributionMode
         };
 }
 
