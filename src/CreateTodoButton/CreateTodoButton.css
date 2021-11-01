@@ -12,6 +12,11 @@
     color: white;
     font-weight: 700;
     font-size: 30px;
+    transition: all ease .2s;
+}
+
+.CreateTodoButton:hover{
+    transform: scale(1.1);
 }
 
 .create-todo-button__icon{
