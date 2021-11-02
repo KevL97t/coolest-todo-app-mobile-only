@@ -43,9 +43,8 @@ function useTodos(){
                   json = await res.json(),
                   template = await json.slice(0, 10);
             console.log(template);
-
-            template.forEach(item => {
-            newTodos.push({
+            template.forEach(async item => {
+            await newTodos.push({
               completed: false,
               text: item.title
             })
@@ -61,6 +60,11 @@ function useTodos(){
           saveTodos(newTodos);
         }
       };
+   
+      React.useEffect(()=>{
+        console.log('use effect')
+      }, [totalTodos]); 
+
 
       const completeTodo = (text) => {
         const todoIndex = todos.findIndex(todo => todo.text === text);
@@ -75,10 +79,7 @@ function useTodos(){
         newTodos.splice(todoIndex, 1);
         saveTodos(newTodos);
       };
-    
-      // React.useEffect(()=>{
-      //   console.log('use effect')
-      // }, []); 
+ 
     
 
     return {
